@@ -37,8 +37,17 @@ app.get('/api/health', (req, res) => {
   res.json({
     status: 'ok',
     geminiConfigured: Boolean(process.env.GEMINI_API_KEY),
-    mapsConfigured: Boolean(process.env.VITE_GOOGLE_MAPS_API_KEY),
+    mapsConfigured: Boolean(process.env.VITE_GOOGLE_MAPS_API_KEY || process.env.GOOGLE_MAPS_API_KEY),
   });
+});
+
+// Maps configuration endpoint for dynamic client loading without hardcoded keys
+app.get('/api/maps/config', (req, res) => {
+  const apiKey =
+    process.env.VITE_GOOGLE_MAPS_API_KEY ||
+    process.env.GOOGLE_MAPS_API_KEY ||
+    '';
+  res.json({ apiKey });
 });
 
 // Multi-turn Gemini Chat API
