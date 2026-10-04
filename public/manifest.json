@@ -1,0 +1,25 @@
+{
+  "id": "/",
+  "name": "LeafLens Farmer App",
+  "short_name": "LeafLens",
+  "description": "Offline-first AI-powered crop diagnosis with agronomist triage.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#15803d",
+  "background_color": "#15803d",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

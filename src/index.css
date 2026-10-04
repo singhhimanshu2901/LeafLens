@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@keyframes scanline {
+  0% {
+    top: 5%;
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    top: 92%;
+    opacity: 0.2;
+  }
+}
+
+@keyframes gentlePulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+}
+
+@keyframes audioWave {
+  0%, 100% {
+    height: 4px;
+  }
+  50% {
+    height: 18px;
+  }
+}
+
+.animate-scanline {
+  animation: scanline 2.4s ease-in-out infinite alternate;
+}
+
+.animate-gentle-pulse {
+  animation: gentlePulse 3s ease-in-out infinite;
+}
+
+.audio-bar-1 { animation: audioWave 1.2s ease-in-out infinite; }
+.audio-bar-2 { animation: audioWave 1.2s ease-in-out 0.2s infinite; }
+.audio-bar-3 { animation: audioWave 1.2s ease-in-out 0.4s infinite; }
+.audio-bar-4 { animation: audioWave 1.2s ease-in-out 0.1s infinite; }
+
+/* Custom scrollbars for cozy feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(168, 162, 158, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 113, 108, 0.7);
+}

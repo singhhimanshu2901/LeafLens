@@ -1,0 +1,6 @@
+{
+  "name": "LeafLens Farmer App",
+  "description": "Offline-first, multilingual AI-powered crop disease diagnosis PWA with edge vision simulation, symptom verification, and agronomist triage portal.",
+  "requestFramePermissions": ["camera", "microphone", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
